@@ -1,0 +1,20 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./release",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "module":"es2015",
+    "experimentalDecorators": true,
+    "target": "es5",
+    "lib": [
+      "es5","es6","es2015","es2016","dom"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "release"
+  ]
+}
