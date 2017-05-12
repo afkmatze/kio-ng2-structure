@@ -1,0 +1,23 @@
+@import '../../../scss/utils';
+
+.language-selector {
+
+    .ui-button {
+        width: rem-calc(40);
+        height: rem-calc(40);
+    }
+
+    .spinner {
+        padding: rem-calc(5);
+
+        svg {
+            width: rem-calc(30);
+            height: rem-calc(30);
+            animation: spin 2s linear 0s infinite;
+            path {
+                stroke: $color-font-bright;
+                fill: $color-font-bright;
+            }
+        }
+    }
+}
