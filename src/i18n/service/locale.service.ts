@@ -1,11 +1,11 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router'
 import { Observable } from 'rxjs'
-import * as locales from './locales'
+import * as locales from '../locales'
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable()
-export class LocaleService {
+export class KioLocaleService {
 
   constructor(private translateService:TranslateService, private router:Router) {
     this.translateService.setDefaultLang(this.currentLang)

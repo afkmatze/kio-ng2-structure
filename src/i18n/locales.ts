@@ -1,4 +1,4 @@
-declare const require
+declare const require:any
 const locale2 = require('locale2')
 import * as constants from './constants'
 

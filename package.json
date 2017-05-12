@@ -2,11 +2,14 @@
   "name": "kio-ng2-structure",
   "version": "0.0.0",
   "description": "kio ng2 structure components",
-  "main": "./src/module.ts",
+  "main": "./release/module.js",
+  "module": "./src/module.ts",
+  "typings": "./release/module.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rm -rf ./release",
-    "build": "tsc -p ./tsconfig.json"
+    "build": "tsc -p ./tsconfig.json",
+    "build:watch": "./scripts/watch.sh build"
   },
   "repository": {
     "type": "git",
@@ -34,10 +37,15 @@
     "@types/svg-pan-zoom": "^3.3.0",
     "kio-ng2": "github:afkmatze/kio-ng2",
     "kio-ng2-component-routing": "github:afkmatze/kio-ng2-component-routing",
+    "locale2": "^2.1.2",
     "rxjs": "^5.3.0",
     "zone.js": "^0.8.9"
   },
   "devDependencies": {
+    "tslint": "^5.2.0",
+    "nodemon": "^1.11.0",
+    "typedoc": "^0.6.0",
+    "typescript": "^2.3.2",    
     "@angular/cli": "^1.0.1",
     "@angular/compiler-cli": "^4.1.0",
     "@types/jasmine": "^2.5.47"

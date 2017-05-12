@@ -5,7 +5,7 @@ import 'rxjs/add/operator/catch'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/timeout'
 
-import { LocaleService } from '../../i18n/locale.service'
+import { KioLocaleService } from '../../i18n/service/locale.service'
 import { 
   KioQuery, KioNode, KioQueryResult,
   KioContentModel, KioNodeModel, KioQueryModel
@@ -21,7 +21,7 @@ const API_TIMEOUT = 10 * 1000
 @Injectable()
 export class KioBackendService {
 
-  constructor(protected http:Http, private mockingService:ContentMockingService, private localeService:LocaleService) { }
+  constructor(protected http:Http, private mockingService:ContentMockingService, private localeService:KioLocaleService) { }
 
   private cache : Map<string,Observable<KioQueryResult>> = new Map()
 

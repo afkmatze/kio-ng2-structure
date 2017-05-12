@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { LocaleService } from '../locale.service'
+import { LocaleService } from '..//service/locale.service'
 import { Router, NavigationStart, NavigationCancel, NavigationError, NavigationEnd } from '@angular/router'
 
 const shortenLocale = locale => locale.split('_')[0]
