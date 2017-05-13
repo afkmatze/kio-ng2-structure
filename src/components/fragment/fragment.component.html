@@ -1,0 +1,14 @@
+<div class="kio-fragment">
+  <h3>Fragment</h3>
+  <h5>{{ node?.cuid }}</h5>
+  <div class="modifiers">
+    {{ node?.modifiers }}
+  </div>  
+  <ul *ngIf="node">
+    <li *ngFor="let child of node.children">
+      <kio-fragment *ngIf="child.type === 'fragment'" [node]="child"></kio-fragment>
+      <kio-src *ngIf="child.type === 'src'" [node]="child"></kio-src>
+      <kio-txt *ngIf="child.type === 'txt'" [node]="child"></kio-txt>
+    </li>
+  </ul>  
+</div>

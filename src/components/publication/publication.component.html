@@ -1,0 +1,10 @@
+<div class="kio-publication">
+  <h3>Publication</h3>
+  <h5>{{ node?.cuid }}</h5>
+  <ul *ngIf="node">
+    <li *ngFor="let child of node.children">
+      <kio-fragment *ngIf="child.type === 'fragment'" [node]="child"></kio-fragment>
+      <kio-content *ngIf="child.type === 'content'" [node]="child"></kio-content>
+    </li>
+  </ul>
+</div>

@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { LocaleService } from './locale.service';
+import { KioLocaleService } from './locale.service';
 
-describe('LocaleService', () => {
+describe('KioLocaleService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [LocaleService]
+      providers: [KioLocaleService]
     });
   });
 
-  it('should ...', inject([LocaleService], (service: LocaleService) => {
+  it('should ...', inject([KioLocaleService], (service: KioLocaleService) => {
     expect(service).toBeTruthy();
   }));
 });

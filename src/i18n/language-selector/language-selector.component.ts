@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { LocaleService } from '..//service/locale.service'
+import { KioLocaleService } from '../service/locale.service'
 import { Router, NavigationStart, NavigationCancel, NavigationError, NavigationEnd } from '@angular/router'
 
 const shortenLocale = locale => locale.split('_')[0]
@@ -12,7 +12,7 @@ const shortenLocale = locale => locale.split('_')[0]
 })
 export class LanguageSelectorComponent implements OnInit {
 
-  constructor(private localeService:LocaleService, private router:Router) { }
+  constructor(private localeService:KioLocaleService, private router:Router) { }
 
   locales:string[]=[]
   localeIndex:number=-1
