@@ -9,7 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rm -rf ./release",
     "build": "tsc -p ./tsconfig.release.json",
-    "build:watch": "./scripts/watch.sh build"
+    "build:watch": "./scripts/watch.sh build",
+    "prebuild:release": "rm -rf ./release",
+    "build:release": "tsc -p ./tsconfig.release.json",
+    "build:release:watch": "./scripts/watch.sh build:release"
   },
   "repository": {
     "type": "git",
