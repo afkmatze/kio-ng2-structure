@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 var AbstractComponent = (function () {
     function AbstractComponent() {
     }
+    AbstractComponent.prototype.onNodeUpdate = function () { };
     AbstractComponent.prototype.ngOnInit = function () {
     };
     AbstractComponent.prototype.ngOnDestroy = function () {

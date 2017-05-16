@@ -13,6 +13,8 @@ export class AbstractComponent<T extends KioStructureType> implements OnInit, On
 
   node:KioNodeModel<T>
 
+  onNodeUpdate(){}
+
   ngOnInit(){
 
   }

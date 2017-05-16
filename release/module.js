@@ -22,6 +22,7 @@ var KioNg2StructureModule = KioNg2StructureModule_1 = (function () {
     function KioNg2StructureModule() {
     }
     KioNg2StructureModule.forRoot = function (moduleOptions) {
+        console.log('init kio structure with options', moduleOptions);
         registerComponentStructure(moduleOptions.components);
         return {
             ngModule: KioNg2StructureModule_1,

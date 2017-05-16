@@ -34,6 +34,7 @@ const StructureComponents = [ PublicationComponent, FragmentComponent, ContentCo
 })
 export class KioNg2StructureModule {
   public static forRoot(moduleOptions:ModuleOptions): ModuleWithProviders {
+    console.log('init kio structure with options', moduleOptions )
     registerComponentStructure(moduleOptions.components)
     return {
       ngModule: KioNg2StructureModule,
