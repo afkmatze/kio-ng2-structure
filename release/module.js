@@ -3,20 +3,12 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { KioBackendService } from './api/services/backend.service';
 import { KioLocaleService } from './i18n/service/locale.service';
-import { AllComponents } from './components/';
-import { registerComponentStructure } from 'kio-ng2-component-routing';
+import { AllComponents, FragmentComponent } from './components';
+import { SomeClass } from './classes/some.class';
 // checkout: https://github.com/dimpu/angular2-markdown/tree/master/src/markdown
 var KioNg2StructureModule = (function () {
     function KioNg2StructureModule() {
     }
-    KioNg2StructureModule.forRoot = function (moduleOptions) {
-        console.log('init kio structure with options', moduleOptions);
-        registerComponentStructure(moduleOptions.components);
-        return {
-            ngModule: KioNg2StructureModule,
-            providers: []
-        };
-    };
     return KioNg2StructureModule;
 }());
 export { KioNg2StructureModule };
@@ -29,7 +21,7 @@ KioNg2StructureModule.decorators = [
                 providers: [KioLocaleService, KioBackendService],
                 declarations: AllComponents.slice(),
                 entryComponents: AllComponents.slice(),
-                exports: [CommonModule]
+                exports: [CommonModule, FragmentComponent, SomeClass]
             },] },
 ];
 /** @nocollapse */
