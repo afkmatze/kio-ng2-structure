@@ -6,19 +6,11 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { KioBackendService } from './api/services/backend.service'
 import { KioLocaleService } from './i18n/service/locale.service'
 
-import { AbstractComponent } from './components/abstract/abstract.component'
-import { PublicationComponent } from './components/publication/publication.component'
-import { FragmentComponent } from './components/fragment/fragment.component'
-import { ContentComponent } from './components/content/content.component'
-import { SrcContentComponent } from './components/content-src/content-src.component'
-import { TxtContentComponent } from './components/content-txt/content-txt.component'
+import { AllComponents } from './components/'
 
 import { ModuleOptions } from './interfaces'
 
 import { registerComponentStructure } from 'kio-ng2-component-routing'
-
-
-const StructureComponents = [ PublicationComponent, FragmentComponent, ContentComponent, SrcContentComponent, TxtContentComponent ]
 
 // checkout: https://github.com/dimpu/angular2-markdown/tree/master/src/markdown
 
@@ -28,9 +20,9 @@ const StructureComponents = [ PublicationComponent, FragmentComponent, ContentCo
     HttpModule
   ],
   providers: [KioLocaleService,KioBackendService],
-  declarations: [AbstractComponent,...StructureComponents],
-  entryComponents: [...StructureComponents],
-  exports: [CommonModule,...StructureComponents]
+  declarations: [...AllComponents],
+  entryComponents: [...AllComponents],
+  exports: [CommonModule]
 })
 export class KioNg2StructureModule {
   public static forRoot(moduleOptions:ModuleOptions): ModuleWithProviders {

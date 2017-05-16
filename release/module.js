@@ -9,14 +9,8 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { KioBackendService } from './api/services/backend.service';
 import { KioLocaleService } from './i18n/service/locale.service';
-import { AbstractComponent } from './components/abstract/abstract.component';
-import { PublicationComponent } from './components/publication/publication.component';
-import { FragmentComponent } from './components/fragment/fragment.component';
-import { ContentComponent } from './components/content/content.component';
-import { SrcContentComponent } from './components/content-src/content-src.component';
-import { TxtContentComponent } from './components/content-txt/content-txt.component';
+import { AllComponents } from './components/';
 import { registerComponentStructure } from 'kio-ng2-component-routing';
-var StructureComponents = [PublicationComponent, FragmentComponent, ContentComponent, SrcContentComponent, TxtContentComponent];
 // checkout: https://github.com/dimpu/angular2-markdown/tree/master/src/markdown
 var KioNg2StructureModule = KioNg2StructureModule_1 = (function () {
     function KioNg2StructureModule() {
@@ -38,9 +32,9 @@ KioNg2StructureModule = KioNg2StructureModule_1 = __decorate([
             HttpModule
         ],
         providers: [KioLocaleService, KioBackendService],
-        declarations: [AbstractComponent].concat(StructureComponents),
-        entryComponents: StructureComponents.slice(),
-        exports: [CommonModule].concat(StructureComponents)
+        declarations: AllComponents.slice(),
+        entryComponents: AllComponents.slice(),
+        exports: [CommonModule]
     })
 ], KioNg2StructureModule);
 export { KioNg2StructureModule };
