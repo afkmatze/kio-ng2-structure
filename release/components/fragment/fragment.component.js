@@ -8,17 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 import { Component, Input } from '@angular/core';
-import { KioFragmentModel } from 'kio-ng2';
 import { AbstractComponent } from '../abstract/abstract.component';
 var FragmentComponent = (function (_super) {
     __extends(FragmentComponent, _super);
@@ -33,16 +23,17 @@ var FragmentComponent = (function (_super) {
     };
     return FragmentComponent;
 }(AbstractComponent));
-__decorate([
-    Input(),
-    __metadata("design:type", KioFragmentModel)
-], FragmentComponent.prototype, "node", void 0);
-FragmentComponent = __decorate([
-    Component({
-        templateUrl: './fragment.component.html',
-        selector: 'kio-fragment',
-        styleUrls: ['./fragment.component.scss']
-    })
-], FragmentComponent);
 export { FragmentComponent };
+FragmentComponent.decorators = [
+    { type: Component, args: [{
+                templateUrl: './fragment.component.html',
+                selector: 'kio-fragment',
+                styleUrls: ['./fragment.component.scss']
+            },] },
+];
+/** @nocollapse */
+FragmentComponent.ctorParameters = function () { return []; };
+FragmentComponent.propDecorators = {
+    'node': [{ type: Input },],
+};
 //# sourceMappingURL=fragment.component.js.map
